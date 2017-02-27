@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by anonymous (http://jsbin.com/xazanakoyo/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by anonymous (http://jsbin.com/mocufizune/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by anonymous (http://jsbin.com/vohoyacafi/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Sleeping adventure">
+  <meta name="author" content="Your Name">
+  <title>Sleeping Adventure</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <style id="jsbin-css">
+</style>
+<style id="jsbin-css">
+
+</style>
+<style id="jsbin-css">
+* {
+  box-sizing: border-box;
+  margin:     0;
+  padding:    0;
+}
+
+body {
+  background:  #434343;
+  color:       #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size:   0.9em;
+  height:1000px;
+}
+
+ul {
+  list-style: none;
+}
+
+/**
+ * top header
+ */
+.top-header {
+  opacity:0.7;
+  align-items:   center;
+  background:    #DF574B;
+  box-shadow:    0px 2px 10px #333333;
+  display:       flex;
+  height:        60px;
+  position:      fixed;
+  top:           0;
+  width:         100%;
+  z-index:       1;
+}
+
+.avatar {
+  background:    #FFFFFF;
+  border-radius: 50%;
+  color:         #333C4D;
+  height:        40px;
+  margin-left:   20px;
+  padding-left:  9px;
+  padding-top:   5px;
+  width:         40px;
+}
+
+/**
+ * top navigation
+ */
+.top-nav a {
+  color:           #F9F9F9;
+  font-weight:     400;
+  margin-left:     20px;
+  text-decoration: none;
+}
+
+/**
+ * main container
+ */
+.container {
+  margin:    60px auto;
+  max-width: 1200px;
+  min-width: 600px;
+ 
+}
+
+/**
+ * main header
+ */
+.container > header {
+  align-items:     center;
+  background:      url('http://juicemigourmet.com/wp-content/uploads/sleeping-beaut.jpg') no-repeat 50% 50%;
+  background-size: 100%;
+  display:         flex;
+  height:          250px;
+}
+
+.container > header p {
+  border-left:  1px solid #FFFFFF;
+  font-weight:  400;
+  font-size:    3em;
+  line-height:  1em;
+  margin-left:  150px;
+  padding-left: 5px;
+}
+
+.container > header span {
+  color: #FBAF41;
+}
+
+/**
+ * main section
+ */
+.main-section {
+  background: #F3BB43;
+}
+
+/**
+ * aside
+ */
+.main-section aside {
+  float: left;
+  width: 180px;
+}
+
+.nav-icon {
+  color:      #624630;
+  padding:    30px;
+  text-align: center;
+}
+
+/**
+ * main navigation
+ */
+.main-nav-btn {
+  background:      none;
+  border-top:      1px solid #FFFFFF;
+  color:           #FFFFFF;
+  display:         block;
+  padding:         35px;
+  text-align:      left;
+  text-decoration: none;
+}
+
+.main-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color:      #624630;
+}
+
+.main-nav-btn.active {
+  background: #F2EBD9;
+  color:      #624630;
+}
+
+.main-nav-btn i {
+  width: 20px;
+}
+/**
+*time
+*/
+#htmer_time{
+  background: #0088A8;
+  height : 35px;
+  width: 250px;
+  text-align: center;
+  margin: 10px auto;
+  color:#FFFFFF;
+}
+#time{
+  height: 200px;
+  width: 200px;
+  background-color: #F3BB43;
+  margin: 10px auto;
+  border-radius: 100px;
+  text-align: center;
+  box-shadow: 2px 2px 10px;
+  background: -webkit-radial-gradient(50% 120%, circle cover, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
+}
+#mytime{
+  margin: 90px 18px 25px 18px;
+  width: 70px;
+  height: 60px;
+  border-radius:15px;
+  text-align: center;
+  background-color: #33CCFF;
+  font-size: 1em;
+}
+#dd{
+  margin-left: 0px;
+  margin-top: -120px;
+}
+#bt{
+  background-color: #33CCFF;
+  font-size: 1em
+}
+
+/**
+ * sleeping information
+ */
+.sleeping-information{
+  background:  #F2EBD9;
+  list-style:  none;
+  margin-left: 180px;
+  min-height:  250px;
+  padding:     10px;
+}
+
+/**
+ * sleeping
+ */
+.sleeping {
+  align-items:   center;
+  border-bottom: 1px solid #FFFFFF;
+  color:         #624630;
+  display:       flex;
+  margin:        10px;
+  padding:       15px;
+  transition:    background-color 100ms linear;
+}
+
+.sleeping:last-child {
+  border: none;
+}
+
+.sleeping:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transition: background-color 100ms linear;
+}
+
+.sleeping img {
+  border: 1px solid #FFFFFF;
+  height: 80px;
+  width:  80px;
+}
+
+.sleeping div:first-of-type {
+  flex:         1;
+  margin-left:  10px;
+  margin-right: 10px;
+}
+/**
+ * 所有div统一长，flex：1
+ */
+.sleeping-date {
+  color:           #624630;
+  font-weight:     400;
+  text-decoration: none;
+}
+
+.sleeping-date:hover {
+  text-decoration: underline;
+}
+
+.sleeping-hour {
+  line-height:   20px;
+  padding-right: 20px;
+  text-align:    right;
+}
+
+.stars {
+  align-items: center;
+  display:     flex;
+  padding-top: 10px;
+}
+
+.fav-link {
+  border-left: 1px solid #FFFFFF;
+  cursor:      pointer;
+  line-height: 60px;
+  text-align:  center;
+  width:       60px;
+}
+
+.fav-link:hover {
+  color: #F13F3F;
+}
+
+.contain{
+      margin:0 auto;
+      width:400px;
+      }
+
+/**
+ * footer section
+ */
+footer {
+  background: #434343;
+  font-size:  0.8em;
+  height:     100px;
+  position:   relative;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer p.title {
+  font-size: 1.2em;
+  padding:   15px;
+}
+
+footer ul {
+  align-items: center;
+  display:     flex;
+  padding:     20px;
+}
+
+footer ul li {
+  flex: 1;
+}
+ #feedback {
+   
+    position: relative;
+    right:-180px;
+  
+}
+#analysis{
+   font-size: 2.5em; 
+   font-weight: 600;
+   font-family: sans-serif;
+}
+#edit{
+height:320px;
+width:700px;
+padding-bottom: 25px;
+font-size: 1.5em;
+font-weight: 600;
+font-family: sans-serif;
+padding: 10px;
+border:3px solid white;
+    background-color: white;
+color: black;
+border-radius: 15px;
+}
+
+#rate{
+   float: right;
+    position: relative;
+    top: -580px;
+    left: -60px;
+    font-size: 2.5em;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.stars2{
+    color: red;
+    font-size: 3em;
+    text-align: right;
+    position: relative;
+    right: -180px;
+    top: -535px;
+}
+#marks{
+    font-weight: 600;  
+    color: cornflowerblue;
+}
+#beat{
+   font-size: 0.5em;    
+    position: relative;
+    left: -185px;
+    font-weight: 400;
+    color: aliceblue;
+    
+    
+}
+.graph{
+height:250px;
+width:300px;
+position:relative;
+left:890px;
+top:-685px;
+border:2.8px solid black;
+border-radius:8px;
+}
+.bottomimg{
+height:500px;
+width:1000px;
+position:relative;
+top:-300px;
+left:180px;
+}
+</style>
+</head>
+<body onload="main()">
+  
+  <header class="top-header">
+    <i class="avatar fa fa-user fa-2x"></i>
+    <nav class="top-nav">
+      <a href="#">Home</a>
+      <a href="#">Contact</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+  
+  <section class="container">
+    <header>
+      <p>
+        <span>Sleeping</span>
+        <span><br>Adventure</span>
+      </p>
+    </header>
+
+    <div class="main-section">
+      <aside>
+        <div class="nav-icon">
+          <i class="fa fa-home fa-2x"></i>
+        </div>
+        <nav class="main-nav">
+          <a href="#" id="sleeppattern-btn" class="main-nav-btn" onclick = "window.open('https://boyuxu.github.io')">
+            <i class="fa  fa-picture-o"></i> 
+            Sleeping Pattern
+          </a>
+     
+          <a href="#" id="analysis-btn" class="main-nav-btn active" onclick="getweeklyanalysis()">
+            <i class="fa fa-thumbs-up"></i> Weekly Analysis
+          </a>
+          <a href="#" id="reward-btn" class="main-nav-btn" onclick="checkreward()">
+            <i class="fa  fa-gift"></i> Reward
+          </a>
+        </nav>
+      </aside>
+
+      <ul class="sleeping-information">
+        <li class="sleeping">
+          <img alt="sleeping image" src=http://www.eattoperform.com/wp-content/uploads/2012/01/sleepbaby.jpg />
+          <div>
+            <a class="sleeping-date" href="#">Date: 2017.1.2</a>
+            <p class="sleeping-weekday">Monday</p>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <p class="sleeping-hour">Sleeping hour<br/>From:2am<br/> To:8am</p>
+          <div class="fav-link">
+            <i class="fa fa-heart"></i>
+          </div>
+        </li>
+        <!--<p style="text-align:center; font-family:Comic Sans MS; color: black;">This is the rooster for your rewarding!</p><br>
+        <div class="contain">
+        <canvas id="webgl" width="400" height="400"></canvas>
+        </div>
+        <p style="text-align:center; font-family:Comic Sans MS; color: black;">More time for sleep, you can earn bigger rooster!</p>
+        <p style="text-align:center; font-family:Georgia; color: black;">Until now, you have slept for 46.1 hours in 7 days.</p>
+        <p style="text-align:center; font-family:Georgia; color: black;">The rooster is keep growing!</p>
+        <p style="text-align:center; font-family:Georgia; color: black;">Hold on! You can form a good sleeping habit!</p><br>
+        <div style="text-align:center;" id= CurAngleDisplay></div>
+        <div style="text-align:center;" id= CurAngleDisplay></div>
+        <div style="text-align:center;" id= CurpDisplay></div>
+        <div style="text-align:center;" id='Mouse'> Mouse Drag totals </div>
+        <div style="text-align:center;" id='Mouse' style="text-align:center;"></div>-->
+          <li class="sleeping">
+          <img alt="sleeping image" src=http://www.eattoperform.com/wp-content/uploads/2012/01/sleepbaby.jpg />
+          <div>
+            <a class="sleeping-date" href="#">Date: 2017.1.3</a>
+            <p class="sleeping-weekday">Tuesday</p>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <p class="sleeping-hour">Sleeping hour<br/>From:1am<br/> To:9am</p>
+          <div class="fav-link">
+            <i class="fa fa-heart"></i>
+          </div>
+        </li>
+          <li class="sleeping">
+          <img alt="sleeping image" src=http://www.eattoperform.com/wp-content/uploads/2012/01/sleepbaby.jpg />
+          <div>
+            <a class="sleeping-date" href="#">Date: 2017.1.4</a>
+            <p class="sleeping-weekday">Wednesday</p>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <p class="sleeping-hour">Sleeping hour<br/>From:2am<br/> To:6am</p>
+          <div class="fav-link">
+            <i class="fa fa-heart"></i>
+          </div>
+        </li>
+          <li class="sleeping">
+          <img alt="sleeping image" src=http://www.eattoperform.com/wp-content/uploads/2012/01/sleepbaby.jpg />
+          <div>
+            <a class="sleeping-date" href="#">Date: 2017.1.5</a>
+            <p class="sleeping-weekday">Thursday</p>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <p class="sleeping-hour">Sleeping hour<br/>From:1am<br/> To:7am</p>
+          <div class="fav-link">
+            <i class="fa fa-heart"></i>
+          </div>
+        </li>
+          <li class="sleeping">
+          <img alt="sleeping image" src=http://www.eattoperform.com/wp-content/uploads/2012/01/sleepbaby.jpg />
+          <div>
+            <a class="sleeping-date" href="#">Date: 2017.1.6</a>
+            <p class="sleeping-weekday">Friday</p>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <p class="sleeping-hour">Sleeping hour<br/>From:0am<br/> To:8am</p>
+          <div class="fav-link">
+            <i class="fa fa-heart"></i>
+          </div>
+        </li>
+          <li class="sleeping">
+          <img alt="sleeping image" src=http://www.eattoperform.com/wp-content/uploads/2012/01/sleepbaby.jpg />
+          <div>
+            <a class="sleeping-date" href="#">Date: 2017.1.7</a>
+            <p class="sleeping-weekday">Saturday</p>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <p class="sleeping-hour">Sleeping hour<br/>From:3am<br/> To:7am</p>
+          <div class="fav-link">
+            <i class="fa fa-heart"></i>
+          </div>
+        </li>
+          <li class="sleeping">
+          <img alt="sleeping image" src=http://www.eattoperform.com/wp-content/uploads/2012/01/sleepbaby.jpg />
+          <div>
+            <a class="sleeping-date" href="#">Date: 2017.1.8</a>
+            <p class="sleeping-weekday">Sunday</p>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <p class="sleeping-hour">Sleeping hour<br/>From:2am<br/> To:10am</p>
+          <div class="fav-link">
+            <i class="fa fa-heart"></i>
+          </div>
+        </li>
+          
+      </ul>
+        <div id="feedback" >
+      <div id="analysis"> Analysis for this week</div>
+      <!--<div id="edit"><input type="text" readOnly="true" value="sleeping time for this week is not regular,and the sleeping quality is not good this week,you sleep too late on Saturday and you wake up too late on Sunday"/></div>-->
+          <div id="edit"><p>sleeping time for this week is not regular,and the sleeping quality is not good this week,you sleep too late on Saturday and you wake up too late on Sunday</p></div>
+            
+        </div> 
+        <div id="feedback" >
+      <div id="analysis"> Advice for this week</div>
+      <!--<div id="edit"><input type="text" readOnly="true" value="sleeping time for this week is not regular,and the sleeping quality is not good this week,you sleep too late on Saturday and you wake up too late on Sunday"/></div>-->
+            <div id="edit"><p>Stick to a sleep schedule of the same bedtime and wake up time, even on the weekends. This helps to regulate your body's clock and could help you fall asleep and stay asleep for the night.Exercise daily. Vigorous exercise is best, but even light exercise is better than no activity. Exercise at any time of day, but not at the expense of your sleep.Try to make dinnertime earlier in the evening, and avoid heavy, rich foods within two hours of bed. Spicy or acidic foods can cause stomach trouble and heartburn.</p></div>
+        </div> 
+		<div><img class="graph" src="sleeping.jpg"/></div>
+        <div id="rate">Overall rating</div>
+        <div class="stars2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <span id="marks">65.8</span>
+              <div id="beat">You have beaten 32.1% people</div>
+            </div>
+			<div><img class="bottomimg" src="bottomimg.jpg"/></div>
+    </div>
+	
+  </section>
+  
+
+  <footer>
+    <p class="title">What We Do</p>
+    <p>"Help you to track your sleeping."</p>
+    <ul>
+      <li>
+        <p><i class="fa fa-map-o fa-2x"></i></p>
+        <p>Super C4, NU</p>
+      </li>
+      <li>
+        <p><i class="fa fa-envelope-o fa-2x"></i></p>
+        <p>Boyuxu2016@u.northwestern.edu</p>
+      </li>
+      <li>
+        <p><i class="fa fa-phone fa-2x"></i></p>
+        <p>+1 000 123 456</p>
+      </li>
+    </ul>
+  </footer>
